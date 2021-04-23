@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/form.js"></script>
+
+    <title>Online Food Service</title>
+</head>
+
+<body>
+
+    <form method="POST" onsubmit="return checkout();" action="">
+        <h1>Food Order Online</h2>
+            <label for="firstName">First Name</label>
+            <input class="textBox" type="text" name="firstName" placeholder="Enter First Name" id="firstName"><br>
+            <hr>
+            <label for="lastName">Last Name</label>
+            <input class="textBox" type="text" name="lastName" placeholder="Enter Last Name" id="lastName"><br>
+            <hr>
+            <label for="phoneNo">Mobile No.</label>
+            <input class="textBox" name="phoneNo" placeholder="2XX 6X5 XX3X" id="phoneNo"><br>
+            <hr>
+            <label for="email">Email Id</label>
+            <input class="textBox" type="email" name="email" placeholder="email@xyz.com" id="email"><br>
+            <hr>
+            <label for="postCode">Postal Code</label>
+            <input class="textBox" type="text" name="postCode" placeholder="Eg. N2V 2Y1" id="postCode"><br>
+            <hr>
+            <div class="fl1">
+                <label for="address">Address</label>
+            </div>
+            <div class="fl2">
+                <textarea class="textBox" type="text" name="address" rows="5" cols="35"
+                    placeholder="Enter Your Address here..." id="address"></textarea><br>
+            </div>
+            <hr>
+            <label for="province">Province</label>
+            <select class="textBox" name="province" id="province">
+                <option value="">--Select Province--</option>
+                <option value="Alberta">Alberta</option>
+                <option value="British Columbia">British Columbia</option>
+                <option value="Ontario">Ontario</option>
+            </select> <br>
+            <hr>
+            <label for="city">City</label>
+            <select class="textBox" name="city" id="city">
+                <option value="">--Select City--</option>
+                <option value="Bramton">Bramton</option>
+                <option value="Waterloo">Waterloo</option>
+                <option value="Cold Lake">Cold Lake</option>
+                <option value="Calgary">Calgary</option>
+                <option value="Dawson">Dawson</option>
+                <option value="Toronto">Toronto</option>
+                <option value="Ottawa">Ottawa </option>
+                <option value="Montreal">Montreal</option>
+            </select><br>
+            <hr>
+            <div class="fl1">
+                <label for="products">Products</label>
+                <span class="imp">Minimum Order $10</span>
+            </div>
+            <div class="fl2">
+                <label class="label2" for="food"> Burger $7 :</label>
+                <input class="num" type="number" name="food" min="0" value=0 id="burger"><br>
+                <label class="label2" for="food"> Wrap $5.99 :</label>
+                <input class="num" type="number" name="food" min="0" value=0 id="Wrap"><br>
+                <label class="label2" for="food"> Sandwich $4.5 :</label>
+                <input class="num" type="number" name="food" min="0" value=0 id="Sandwich"><br>
+                <label class="label2" for="food"> Samosa $3.3</label>
+                <input class="num" type="number" name="food" min="0" value=0 id="Samosa"><br>
+                <label class="label2" for="food"> Bread $2.9 :</label>
+                <input class="num" type="number" name="food" min="0" value=0 id="Bread"><br>
+            </div>
+
+            <br><br>
+            <hr>
+            <label for="creditCard">Credit Card</label>
+            <input class="textCredit" type="text" name="creditCard" id="creditCard"
+                placeholder="4X3X-XXX2-5X7X-9XXX"><br>
+            <hr>
+            <label for="cardExpireDate">Expire Date</label> &nbsp;
+            <input class="cardExpire" type="text" name="cardExpireDate" placeholder="  YYYY" maxlength="4"
+                id="cardExpireYear">-<input type="text" class="cardExpire" maxlength="3" name="cardExpireDate"
+                placeholder="  MMM" id="cardExpireMonth"><br>
+            <hr>
+            <label for="password">Password</label>
+            <input class="textBox" type="password" name="password" id="password" placeholder="Enter Password"><br>
+            <p class="imp">Must include one uppercase,lowercase, a number and a special character</p>
+            <hr>
+            <div class="fl1">
+                <label for="passwordConfirm">Confirm Password</label>
+            </div>
+            <div class="fl2"></div>
+            <input class="textBox" type="password" name="passwordConfirm" id="passwordConfirm"
+                placeholder="Re-enter Password"><br>
+            </div>
+            <p class="errors" id="errors"></p>
+
+            <input class="submit" type="submit" value="Order" class="btn">
+
+    </form>
+
+    <div class="formData">
+        <h3>Online Order Form @ Reciept</h3>
+        <p id="formResult">Wait printing is in progress...</p>
+    </div>
+</body>
+
+</html>
